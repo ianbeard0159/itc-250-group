@@ -30,17 +30,27 @@
         <body>
           <h1 align="center">Convert a Temperature</h1>
           <form align="center" method="POST">
-            Enter the tempurature you wish to convert:<input type="number" name="tEmp">
-
+            Enter the tempurature you wish to convert:<input type="number" name="tEmp"> 
+			
+            <select name="convertTemp">
+            	<option value="FtoC">Farenheit to Celcius</option>
+                <option value="FtoK">Farenheit to Kelvin</option>
+                <option value="KtoF">Kelvin to Farenheit</option>
+                <option value="KtoC">Kelvin to Celcius</option>
+                <option value="CtoK">Celcius to Kelvin</option>
+                <option value="CtoF">Celcius to Farenheit</option>
+			</select>
+            <!--
             <h2>Convert temperature from: </h2>
-
             <input type="radio" name="convertTemp" value="FtoC"> Farenheit to Celcius <br>
             <input type="radio" name="convertTemp" value="FtoK"> Farenheit to Kelvin <br>
             <input type="radio" name="convertTemp" value="KtoF"> Kelvin to Farenheit <br>
             <input type="radio" name="convertTemp" value="KtoC"> Kelvin to Celcius <br>
             <input type="radio" name="convertTemp" value="CtoK"> Celcius to Kelvin <br>
             <input type="radio" name="convertTemp" value="CtoF"> Celcius to Farenheit <br>
-
+            -->
+            <br>
+            <br>
             <input type="submit" value="Convert Tempurature!">
           </form>
         </body>
