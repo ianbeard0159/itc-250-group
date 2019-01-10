@@ -36,12 +36,12 @@
             Enter the tempurature you wish to convert:<input type="number" name="tEmp"> 
 			
             <select name="convertTemp">
-            	<option value="FtoC">Farenheit to Celcius</option>
-                <option value="FtoK">Farenheit to Kelvin</option>
-                <option value="KtoF">Kelvin to Farenheit</option>
-                <option value="KtoC">Kelvin to Celcius</option>
-                <option value="CtoK">Celcius to Kelvin</option>
-                <option value="CtoF">Celcius to Farenheit</option>
+            	<option value="FtoC">Fahrenheit to Celsius</option>
+                <option value="FtoK">Fahrenheit to Kelvin</option>
+                <option value="KtoF">Kelvin to Fahrenheit</option>
+                <option value="KtoC">Kelvin to Celsius</option>
+                <option value="CtoK">Celsius to Kelvin</option>
+                <option value="CtoF">Celsius to Fahrenheit</option>
 			</select>
          
             <br>
