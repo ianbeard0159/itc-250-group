@@ -25,7 +25,7 @@
            $newTemp = (($tEmp * 9/5) + 32);
             break;      
     }
-    echo "<h2 align='center'>The initial temperature was " . $tEmp . " and the converted temperature is: " . $newTemp . "</h2>";
+    echo "<h2 align='center'>The initial temperature was " . $tEmp . " and the converted temperature is: " . number_format($newTemp, 2) . "</h2>";
   }
   else {
     echo'
