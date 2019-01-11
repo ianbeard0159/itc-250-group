@@ -3,7 +3,7 @@
     <body>
         <?php
             /*
-                If the user submitted the form, set the values to the 
+                If the user submitted the form, set 'outString' to the 
                 input from post
             */
             $outString = "";
@@ -17,7 +17,7 @@
             }
             /*
                 If the user entered the page without submitting the form
-                first, do nothing, leaving 'val1' and 'val2' as null values
+                first, do nothing, leaving 'outString' as an empty string
             */
         ?>
         <form method="POST">
