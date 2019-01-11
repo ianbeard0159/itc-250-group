@@ -1,7 +1,9 @@
 
 
 <?php
-//second draft
+$message=''; 
+$theFormula=''; 
+//Final draft
   if(isset($_POST['convertTemp']) && isset($_POST['tEmp'])) {
     $convertTemp = $_POST['convertTemp'];
     $tEmp = $_POST['tEmp'];
