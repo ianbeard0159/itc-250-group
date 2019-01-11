@@ -8,32 +8,39 @@
     switch($convertTemp){
         case 'FtoC':
             $newTemp = (($tEmp - 32)* (5/9));
+        	$theFormula = "Formula: (". $tEmp ."°F - 32)  x  (5 / 9) = " . number_format((float)$newTemp, 2, '.', '') . "°C";
             break;
         case 'FtoK':
-           $newTemp = (($tEmp - 32)* (5/9) + 273.15);
+           	$newTemp = (($tEmp - 32)* (5/9) + 273.15);
+        	$theFormula = "Formula: (". $tEmp ."°F - 32)  x  (5 / 9) + 273.15 = " . number_format((float)$newTemp, 2, '.', '') . "K";
             break;
         case 'KtoF':
-           $newTemp = (($tEmp - 273.15)* (9/5) + 32);
+           	$newTemp = (($tEmp - 273.15)* (9/5) + 32);
+        	$theFormula = "Formula: (". $tEmp ."K - 273.15)  x  (9 / 5) + 32 = " . number_format((float)$newTemp, 2, '.', '') . "°F";
             break;
-         case 'KtoC':
-           $newTemp = ($tEmp - 273.15);
+        case 'KtoC':
+           	$newTemp = ($tEmp - 273.15);
+        	$theFormula = "Formula: ". $tEmp ."K - 273.15 = " . number_format((float)$newTemp, 2, '.', '') . "°C";
             break;
         case 'CtoK':
-           $newTemp = ($tEmp + 273.15);
+           	$newTemp = ($tEmp + 273.15);
+        	$theFormula = "Formula: ". $tEmp ."°C + 273.15 = " . number_format((float)$newTemp, 2, '.', '') . "°F";
             break;
         case 'CtoF':
-           $newTemp = (($tEmp * 9/5) + 32);
+           	$newTemp = (($tEmp * 9/5) + 32);
+        	$theFormula = "Formula: (". $tEmp ."°C  x (9 / 5)) + 32 = " . number_format((float)$newTemp, 2, '.', '') . "°F";
             break;      
     }
-    echo "<h2 align='center'>The initial temperature was " . $tEmp . " and the converted temperature is: " . number_format((float)$newTemp, 2, '.', '') . "</h2>";
+    $message = "<h2 align='center'>The initial temperature was " . $tEmp . " and the converted temperature is: " . number_format((float)$newTemp, 2, '.', '') . "</h2>";
   }
-  else {
-    echo'
-      <html>
+  
+?>
+
+<html>
         <body>
           <h1 align="center">Convert a Temperature</h1>
           <form align="center" method="POST">
-            Enter the tempurature you wish to convert:<input type="number" name="tEmp"> 
+            Enter the tempurature you wish to convert:<input type="number" name="tEmp"/> 
 			
             <select name="convertTemp">
             	<option value="FtoC">Fahrenheit to Celsius</option>
@@ -47,11 +54,11 @@
             <br>
             <br>
             <input type="submit" value="Convert Tempurature!">
+            <?php echo $message; ?>
+            <?php echo $theFormula; ?>
           </form>
+          
+          
         </body>
       </html>
       
-      
-    ';
-  }
-?>
